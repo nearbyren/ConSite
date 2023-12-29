@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/theme_bg_color"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_title" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:paddingTop="@dimen/dp_19">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/info_setting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_25"
+                        android:drawableLeft="@drawable/ic_settting"
+                        android:drawablePadding="@dimen/dp_7"
+                        android:gravity="center"
+                        android:text="@string/info_setting"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_change_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_58"
+                        app:layout_constraintTop_toBottomOf="@+id/info_setting">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/change_password"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_24"
+                            android:gravity="center"
+                            android:text="@string/info_password"
+                            android:textColor="@color/info_22222"
+                            android:textSize="@dimen/sp_16"
+                            app:layout_constraintLeft_toLeftOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/change_password_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dp_24"
+                            android:src="@drawable/icon_next"
+                            app:layout_constraintRight_toRightOf="parent" />
+
+                        <androidx.constraintlayout.helper.widget.Flow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            app:constraint_referenced_ids="change_password,change_password_icon"
+                            app:flow_verticalAlign="center"
+                            app:flow_wrapMode="chain" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:id="@+id/line1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:layout_marginLeft="@dimen/dp_24"
+                        android:layout_marginRight="@dimen/dp_24"
+                        android:background="#CAEEEEEE"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_change_password" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_info_notify"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_58"
+                        app:layout_constraintTop_toBottomOf="@+id/line1">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/notify"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_24"
+                            android:gravity="center"
+                            android:text="@string/info_notify"
+                            android:textColor="@color/info_22222"
+                            android:textSize="@dimen/sp_16"
+                            app:layout_constraintLeft_toLeftOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/notify_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dp_24"
+                            android:src="@drawable/icon_next"
+                            app:layout_constraintRight_toRightOf="parent" />
+
+                        <androidx.constraintlayout.helper.widget.Flow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            app:constraint_referenced_ids="notify,notify_icon"
+                            app:flow_verticalAlign="center"
+                            app:flow_wrapMode="chain" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:background="@color/white"
+                    android:paddingTop="@dimen/dp_19"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_setting">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/info_other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_25"
+                        android:drawableLeft="@drawable/ic_settting"
+                        android:drawablePadding="@dimen/dp_7"
+                        android:gravity="center"
+                        android:text="@string/info_other"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_contact_us"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_58"
+                        app:layout_constraintTop_toBottomOf="@+id/info_other">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/contact_us"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_24"
+                            android:gravity="center"
+                            android:text="@string/info_contact_us"
+                            android:textColor="@color/info_22222"
+                            android:textSize="@dimen/sp_16"
+                            app:layout_constraintLeft_toLeftOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/contact_us_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dp_24"
+                            android:src="@drawable/icon_next"
+                            app:layout_constraintRight_toRightOf="parent" />
+
+                        <androidx.constraintlayout.helper.widget.Flow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            app:constraint_referenced_ids="contact_us,contact_us_icon"
+                            app:flow_verticalAlign="center"
+                            app:flow_wrapMode="chain" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:layout_marginLeft="@dimen/dp_24"
+                        android:layout_marginRight="@dimen/dp_24"
+                        android:background="#CAEEEEEE"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_contact_us" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_privacy_policy"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_58"
+                        app:layout_constraintTop_toBottomOf="@+id/line">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/privacy_policy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_24"
+                            android:gravity="center"
+                            android:text="@string/info_privacy_policy"
+                            android:textColor="@color/info_22222"
+                            android:textSize="@dimen/sp_16"
+                            app:layout_constraintLeft_toLeftOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/privacy_policy_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dp_24"
+                            android:src="@drawable/icon_next"
+                            app:layout_constraintRight_toRightOf="parent" />
+
+                        <androidx.constraintlayout.helper.widget.Flow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            app:constraint_referenced_ids="privacy_policy,privacy_policy_icon"
+                            app:flow_verticalAlign="center"
+                            app:flow_wrapMode="chain" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:id="@+id/line3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:layout_marginLeft="@dimen/dp_24"
+                        android:layout_marginRight="@dimen/dp_24"
+                        android:background="#CAEEEEEE"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_privacy_policy" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_terms_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_58"
+                        app:layout_constraintTop_toBottomOf="@+id/line3">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/terms_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_24"
+                            android:gravity="center"
+                            android:text="@string/info_terms_details"
+                            android:textColor="@color/info_22222"
+                            android:textSize="@dimen/sp_16"
+                            app:layout_constraintLeft_toLeftOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/terms_details_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dp_24"
+                            android:src="@drawable/icon_next"
+                            app:layout_constraintRight_toRightOf="parent" />
+
+                        <androidx.constraintlayout.helper.widget.Flow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            app:constraint_referenced_ids="terms_details,terms_details_icon"
+                            app:flow_verticalAlign="center"
+                            app:flow_wrapMode="chain" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:id="@+id/line4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:layout_marginLeft="@dimen/dp_24"
+                        android:layout_marginRight="@dimen/dp_24"
+                        android:background="#CAEEEEEE"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_terms_details" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="@dimen/dp_20"
+                        android:id="@+id/quit"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_38"
+                        android:layout_marginLeft="@dimen/dp_23"
+                        android:layout_marginTop="@dimen/dp_38"
+                        android:layout_marginRight="@dimen/dp_23"
+                        android:background="@drawable/submit_bg_green"
+                        android:text="@string/quit"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16"
+                        app:layout_constraintTop_toBottomOf="@+id/line4" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

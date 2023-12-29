@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+
+        android:background="@drawable/index_index_bg_white3">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/switch_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:gravity="center"
+            tools:text="@string/info_privacy_policy"
+            android:textColor="@color/info_22222"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/switch_text_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_24"
+            tools:src="@drawable/ic_gou"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:constraint_referenced_ids="switch_text,switch_text_icon"
+            app:flow_verticalAlign="center"
+            app:flow_wrapMode="chain" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
