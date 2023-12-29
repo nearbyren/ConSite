@@ -14,6 +14,7 @@ import com.bumptech.glide.Glide
 import com.zhihu.matisse.Matisse
 import nearby.lib.base.bar.BarHelperConfig
 import nearby.lib.mvvm.activity.BaseAppBindActivity
+import nearby.lib.uikit.widgets.dpToPx
 import java.io.File
 import java.util.Calendar
 
@@ -30,8 +31,6 @@ class DocumentUploadActivity : BaseAppBindActivity<ActivityDocumentUploadBinding
 
 
     override fun initialize(savedInstanceState: Bundle?) {
-        val initialBitmap = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888)
-        binding.signature.setSignature(initialBitmap)
         binding.clRegisterDate.setOnClickListener(this)
         binding.clExpiryDate.setOnClickListener(this)
         binding.ivWork1.setOnClickListener(this)

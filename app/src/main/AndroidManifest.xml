@@ -152,6 +152,12 @@
             android:name="apps.construction.site.ui.SelectTabTypeActivity"
             android:exported="true"
             android:theme="@style/AppTheme" />
+
+        <!--工友通讯录-->
+        <activity
+            android:name="apps.construction.site.ui.CoworkerActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

@@ -35,6 +35,7 @@
     <string name="shooting">拍攝</string>
     <string name="select_album">從手機相冊選擇</string>
     <string name="select_table_type">選擇表格類型</string>
+    <string name="coworker_book">工友通讯录</string>
 
 
 
@@ -44,17 +45,10 @@
 
 
 
-
-    <string name="info_01">聯絡人姓名</string>
-    <string name="info_02">手機號碼</string>
-    <string name="info_03">手機號碼</string>
-    <string name="info_10">實用資訊</string>
     <string name="info_11">常見問題</string>
-    <string name="info_12">聯絡我們</string>
     <string name="info_13">關於我們</string>
     <string name="info_14">條款及細節</string>
     <string name="info_15">私隱政策</string>
-    <string name="info_16">登出</string>
 
     <string name="name">姓名</string>
     <string name="school_name">學校名稱</string>

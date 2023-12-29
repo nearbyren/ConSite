@@ -12,6 +12,7 @@ import apps.construction.site.databinding.FragmentIndex1Binding
 import apps.construction.site.http.IndexViewModel
 import apps.construction.site.model.MenuDto
 import apps.construction.site.model.SwitchDto
+import apps.construction.site.ui.CoworkerActivity
 import apps.construction.site.ui.DocumentUploadActivity
 import apps.construction.site.ui.SelectTabTypeActivity
 import com.scwang.smart.refresh.footer.ClassicsFooter
@@ -67,6 +68,9 @@ class IndexFragment1 :
 
                     "證件上傳" -> {
                         navigate(DocumentUploadActivity::class.java)
+                    }
+                    "工友通訊錄" -> {
+                        navigate(CoworkerActivity::class.java)
                     }
                 }
             }

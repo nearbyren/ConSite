@@ -41,6 +41,11 @@ class SignatureView(context: Context, attrs: AttributeSet? = null) : View(contex
 
     }
 
+    override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
+        super.onSizeChanged(w, h, oldw, oldh)
+        setSignature(Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888))
+    }
+
     override fun onDraw(canvas: Canvas) {
         fontMetrics?.let { metrics ->
             val offset = (metrics.ascent + metrics.descent) / 2
@@ -49,16 +54,10 @@ class SignatureView(context: Context, attrs: AttributeSet? = null) : View(contex
         // 绘制保存的位图
         signatureBitmap?.let {
             println("我來了")
-            canvas.drawBitmap(it, 0f, 0f, paint)
+//            canvas.drawBitmap(it, 0f, 0f, paint)
         }
         // 绘制当前路径
         canvas.drawPath(path, paint)
-    }
-
-    override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
-        super.onSizeChanged(w, h, oldw, oldh)
-        setSignature(Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888))
-
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
@@ -69,12 +68,11 @@ class SignatureView(context: Context, attrs: AttributeSet? = null) : View(contex
             MotionEvent.ACTION_DOWN -> {
                 //告知父類不要攔截事件
                 parent.requestDisallowInterceptTouchEvent(true)
-//                text = ""
+                //                text = ""
                 path.moveTo(x, y)
             }
 
             MotionEvent.ACTION_MOVE -> {
-//
                 path.lineTo(x, y)
             }
 
@@ -90,6 +88,37 @@ class SignatureView(context: Context, attrs: AttributeSet? = null) : View(contex
         return true
     }
 
+
+    /*    override fun onTouchEvent(event: MotionEvent): Boolean {
+            val x = event.x
+            val y = event.y
+
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    println("onTouchEvent ACTION_DOWN")
+                    parent.requestDisallowInterceptTouchEvent(true)
+                    path.moveTo(x, y)
+                }
+
+                MotionEvent.ACTION_MOVE -> {
+                    println("onTouchEvent ACTION_MOVE")
+                    path.lineTo(x, y)
+                    invalidate()
+                }
+
+                MotionEvent.ACTION_UP -> {
+                    // 将当前路径绘制到位图中
+                    parent.requestDisallowInterceptTouchEvent(false)
+                    println("onTouchEvent ACTION_UP")
+                    signatureCanvas?.drawPath(path, paint)
+                    path.reset()
+                    invalidate()
+
+                }
+            }
+            return true
+        }*/
+
     fun clear() {
         // 清除路径和位图
         path.reset()
@@ -101,7 +130,7 @@ class SignatureView(context: Context, attrs: AttributeSet? = null) : View(contex
         return signatureBitmap
     }
 
-    fun setSignature(bitmap: Bitmap) {
+    private fun setSignature(bitmap: Bitmap) {
         // 设置保存的位图
         signatureBitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true)
         signatureCanvas = Canvas(signatureBitmap!!)

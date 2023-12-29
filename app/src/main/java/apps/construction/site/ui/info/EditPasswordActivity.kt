@@ -52,7 +52,7 @@ class EditPasswordActivity : BaseAppBindActivity<ActivityEditPasswordBinding>() 
     override fun initBarHelperConfig(): BarHelperConfig {
         return BarHelperConfig.builder().setBack(true).setIconLeft(R.drawable.icon_black_left)
             .setBgColor(nearby.lib.base.R.color.white)
-            .setTitle(title = getString(R.string.info_03), titleColor = nearby.lib.base.R.color.black).build()
+            .setTitle(title = getString(R.string.info_password), titleColor = nearby.lib.base.R.color.black).build()
     }
 
 }
