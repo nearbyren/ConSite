@@ -6,7 +6,7 @@ import apps.construction.site.R
 import apps.construction.site.adapter.ItemNotifyMessageAdapter
 import apps.construction.site.databinding.FragmentIndex2Binding
 import apps.construction.site.http.IndexViewModel
-import apps.construction.site.model.MenuDto
+import apps.construction.site.model.NotifyMessageDto
 import apps.construction.site.ui.NotifyDetailActivity
 import com.scwang.smart.refresh.footer.ClassicsFooter
 import com.scwang.smart.refresh.header.ClassicsHeader
@@ -30,29 +30,25 @@ class IndexFragment2 :
         return R.layout.fragment_index_2
     }
 
-    private var activityItems = mutableListOf<MenuDto>()
+    private var itemNotifyMessageData = mutableListOf<NotifyMessageDto>()
     private val indexTagAdapter by lazy { ItemNotifyMessageAdapter() }
     private var layoutManager: LinearLayoutManager? = null
     override fun initialize(savedInstanceState: Bundle?) {
-        activityItems.add(MenuDto("", R.drawable.ic_item_01))
-        activityItems.add(MenuDto("", R.drawable.ic_item_01))
-        activityItems.add(MenuDto("", R.drawable.ic_item_01))
-        activityItems.add(MenuDto("", R.drawable.ic_item_01))
-        activityItems.add(MenuDto("", R.drawable.ic_item_01))
-        activityItems.add(MenuDto("", R.drawable.ic_item_01))
-        activityItems.add(MenuDto("", R.drawable.ic_item_01))
-        activityItems.add(MenuDto("", R.drawable.ic_item_01))
-        activityItems.add(MenuDto("", R.drawable.ic_item_01))
+        itemNotifyMessageData.add(NotifyMessageDto())
+        itemNotifyMessageData.add(NotifyMessageDto())
+        itemNotifyMessageData.add(NotifyMessageDto())
+        itemNotifyMessageData.add(NotifyMessageDto())
+        itemNotifyMessageData.add(NotifyMessageDto())
         layoutManager = LinearLayoutManager(context)
-        indexTagAdapter.setItems(activityItems)
+        indexTagAdapter.setItems(itemNotifyMessageData)
         binding.recycle.adapter = indexTagAdapter
         binding.recycle.layoutManager = layoutManager
         binding.recycle.addItemDecoration(SpaceItemDecoration(12.dpToPx, 0.dpToPx, 0.dpToPx))
         binding.recycle.setHasFixedSize(true)
         binding.recycle.itemAnimator = null
         indexTagAdapter.setOnItemClickListener(listener = object :
-            BaseRecyclerAdapter.OnItemClickListener<MenuDto> {
-            override fun onItemClick(holder: Any, item: MenuDto, position: Int) {
+            BaseRecyclerAdapter.OnItemClickListener<NotifyMessageDto> {
+            override fun onItemClick(holder: Any, item: NotifyMessageDto, position: Int) {
             navigate(NotifyDetailActivity::class.java)
             }
         })

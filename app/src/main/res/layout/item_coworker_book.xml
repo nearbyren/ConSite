@@ -16,7 +16,7 @@
             android:layout_marginTop="@dimen/dp_19"
             android:gravity="center"
             android:text="工友姓名"
-            android:textColor="@color/info_22222"
+            android:textColor="#000000"
             android:textSize="@dimen/sp_14"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -37,8 +37,8 @@
             android:layout_marginLeft="@dimen/dp_32"
             android:layout_marginTop="@dimen/dp_4"
             android:text="15306513587"
-            android:textColor="@color/info_22222"
-            android:textSize="@dimen/sp_16"
+            android:textColor="#666666"
+            android:textSize="@dimen/sp_14"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name" />
 

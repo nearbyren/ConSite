@@ -17,8 +17,8 @@
             android:drawablePadding="@dimen/dp_3"
             android:gravity="center"
             android:text="早班工作通知"
-            android:textColor="@color/info_22222"
-            android:textSize="@dimen/sp_16"
+            android:textColor="#000000"
+            android:textSize="@dimen/sp_15"
             app:layout_constraintLeft_toRightOf="@+id/line"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,8 +30,8 @@
             android:layout_marginRight="@dimen/dp_15"
             android:gravity="center"
             android:text="9：00 25/05/2023"
-            android:textColor="@color/info_22222"
-            android:textSize="@dimen/sp_16"
+            android:textColor="#999999"
+            android:textSize="@dimen/sp_13"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -44,8 +44,8 @@
             android:layout_marginRight="@dimen/dp_40"
             android:layout_marginBottom="@dimen/dp_19"
             android:text="請謹記填妥每日工作前安全會議以及鑒別記錄（開工前部分）"
-            android:textColor="@color/info_22222"
-            android:textSize="@dimen/sp_16"
+            android:textColor="#666666"
+            android:textSize="@dimen/sp_14"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@+id/line"
             app:layout_constraintRight_toRightOf="parent"

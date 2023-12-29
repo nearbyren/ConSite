@@ -168,7 +168,7 @@ static def getVersionCodePrefix() {
 android.applicationVariants.all { variant ->
     variant.outputs.all {
         //在这里修改apk文件名 月日时分 版本${variant.productFlavors[0].name}${variant.versionName}
-        outputFileName = "Master${getVersionCodePrefix()}.apk"
+        outputFileName = "ConSite${getVersionCodePrefix()}.apk"
     }
 }
 //gradle强制刷新依赖build.gradle增加配置
