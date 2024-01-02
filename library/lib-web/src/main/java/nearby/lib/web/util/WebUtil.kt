@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.view.View
 import android.webkit.WebSettings
 import android.webkit.WebView
+import nearby.lib.web.R
 import java.io.File
 
 object WebUtil {

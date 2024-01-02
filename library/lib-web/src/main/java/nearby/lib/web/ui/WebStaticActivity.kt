@@ -5,9 +5,9 @@ import android.view.ViewGroup
 import android.webkit.WebView
 import android.widget.LinearLayout
 import android.widget.ProgressBar
+import nearby.lib.web.base.BaseAppWebBindActivity
 import nearby.lib.base.bar.BarHelperConfig
 import nearby.lib.web.R
-import nearby.lib.web.base.BaseAppWebBindActivity
 import nearby.lib.web.databinding.WebStaticActivityBinding
 
 /**

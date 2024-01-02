@@ -8,7 +8,7 @@ import android.telephony.TelephonyManager
 import androidx.core.app.ActivityCompat
 import com.phone.library_base.manager.SystemIdManager
 import nearby.lib.base.app.ApplicationProvider
-import java.util.Locale
+import java.util.*
 
 object SystemManager {
 

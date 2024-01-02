@@ -11,6 +11,7 @@ import android.graphics.Path
 import android.graphics.RectF
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatImageView
+import nearby.lib.uikit.widgets.dpToPx
 
 class BannerRoundImageView @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : AppCompatImageView(context!!, attrs, defStyleAttr) {
     private var mPath: Path? = null

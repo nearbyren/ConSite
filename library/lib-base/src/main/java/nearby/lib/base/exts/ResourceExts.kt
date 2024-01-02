@@ -2,11 +2,7 @@ package nearby.lib.base.exts
 
 import android.content.Context
 import android.graphics.drawable.Drawable
-import androidx.annotation.ColorInt
-import androidx.annotation.ColorRes
-import androidx.annotation.DimenRes
-import androidx.annotation.DrawableRes
-import androidx.annotation.StringRes
+import androidx.annotation.*
 import androidx.core.content.ContextCompat
 
 /**

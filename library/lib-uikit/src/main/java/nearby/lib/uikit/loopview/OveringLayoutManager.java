@@ -13,6 +13,9 @@ import androidx.recyclerview.widget.LinearSmoothScroller;
 import androidx.recyclerview.widget.OrientationHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
+import nearby.lib.uikit.loopview.ILoopView;
+import nearby.lib.uikit.loopview.OnPageChangeListener;
+
 /**
  * An implementation of {@link RecyclerView.LayoutManager} which behaves like view pager.
  * Please make sure your child view have the same size.

@@ -1,4 +1,4 @@
-import  composing.builds.*
+import composing.builds.*
 plugins {
     id 'com.android.library'
     id 'composing.builds'

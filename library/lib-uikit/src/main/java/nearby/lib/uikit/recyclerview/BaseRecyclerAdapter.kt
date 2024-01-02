@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import androidx.recyclerview.widget.RecyclerView
+import nearby.lib.uikit.widgets.click
 import nearby.lib.uikit.widgets.singleClick
 
 /**

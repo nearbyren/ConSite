@@ -1,10 +1,6 @@
 package nearby.lib.netwrok.download
 
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
 import nearby.lib.netwrok.base.HttpClient
 import java.io.File
 import java.io.FileOutputStream

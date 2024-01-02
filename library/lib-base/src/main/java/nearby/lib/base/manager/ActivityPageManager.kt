@@ -4,8 +4,9 @@ import android.app.Activity
 import android.app.ActivityManager
 import android.content.Context
 import android.text.TextUtils
-import java.util.Stack
+import java.util.*
 import java.util.concurrent.atomic.AtomicBoolean
+
 
 
 class ActivityPageManager private constructor() {

@@ -1,6 +1,6 @@
 package nearby.lib.uikit
 
-import org.junit.Assert.assertEquals
+import org.junit.Assert.*
 import org.junit.Test
 
 /**

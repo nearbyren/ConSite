@@ -3,6 +3,7 @@ package nearby.lib.router
 import android.app.Application
 import android.net.Uri
 import com.alibaba.android.arouter.launcher.ARouter
+import kotlin.properties.Delegates
 
 /**
  * @description: ARouter工具类

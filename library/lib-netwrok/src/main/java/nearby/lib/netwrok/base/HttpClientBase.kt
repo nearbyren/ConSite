@@ -9,7 +9,7 @@ import okhttp3.Protocol
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.scalars.ScalarsConverterFactory
-import java.util.Collections
+import java.util.*
 
 /**
  * @description: Http客户端基底

@@ -4,7 +4,7 @@ import android.app.ActivityManager
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import java.lang.ref.WeakReference
-import java.util.Stack
+import java.util.*
 import kotlin.system.exitProcess
 
 

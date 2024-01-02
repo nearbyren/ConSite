@@ -7,11 +7,8 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.room.Room
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
-import kotlinx.coroutines.DelicateCoroutinesApi
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
+import kotlinx.coroutines.flow.collect
 import nearby.lib.room.db.SQLDatabase
 import nearby.lib.room.db.UserFlowDao
 import nearby.lib.room.model.UserEntity
