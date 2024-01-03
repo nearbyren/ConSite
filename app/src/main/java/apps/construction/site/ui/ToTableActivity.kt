@@ -6,12 +6,15 @@ import apps.construction.site.R
 import apps.construction.site.adapter.ItemCoworkerAdapter
 import apps.construction.site.adapter.ItemMainMenuAdapter
 import apps.construction.site.adapter.ItemSwitchProjectAdapter
+import apps.construction.site.adapter.ItemToTableAdapter
 import apps.construction.site.databinding.ActivityCoworkerBookBinding
 import apps.construction.site.databinding.ActivityNotifyDetailBinding
+import apps.construction.site.databinding.ActivityToTableBinding
 import apps.construction.site.dialog.SignOutDialogFragment
 import apps.construction.site.model.CoworkerDto
 import apps.construction.site.model.MenuDto
 import apps.construction.site.model.SwitchDto
+import apps.construction.site.model.ToTableDto
 import com.scwang.smart.refresh.footer.ClassicsFooter
 import com.scwang.smart.refresh.header.ClassicsHeader
 import com.scwang.smart.refresh.layout.listener.OnLoadMoreListener
@@ -23,33 +26,42 @@ import nearby.lib.uikit.recyclerview.SpaceItemDecoration
 import nearby.lib.uikit.widgets.dpToPx
 
 
-class CoworkerActivity : BaseAppBindActivity<ActivityCoworkerBookBinding>() {
+class ToTableActivity : BaseAppBindActivity<ActivityToTableBinding>() {
 
-    private var itemCoworkerData = mutableListOf<CoworkerDto>()
-    private val itemCoworkerAdapter by lazy { ItemCoworkerAdapter() }
+    private var itemToTableData = mutableListOf<ToTableDto>()
+    private val itemToTableAdapter by lazy { ItemToTableAdapter() }
     override fun layoutRes(): Int {
-        return R.layout.activity_coworker_book
+        return R.layout.activity_to_table
     }
 
 
     override fun initialize(savedInstanceState: Bundle?) {
-        itemCoworkerData.add(CoworkerDto())
-        itemCoworkerData.add(CoworkerDto())
-        itemCoworkerData.add(CoworkerDto())
-        itemCoworkerData.add(CoworkerDto())
-        itemCoworkerData.add(CoworkerDto())
-        itemCoworkerData.add(CoworkerDto())
-        itemCoworkerData.add(CoworkerDto())
-        itemCoworkerAdapter.setItems(itemCoworkerData)
-        binding.recycle.adapter = itemCoworkerAdapter
+        itemToTableData.add(ToTableDto())
+        itemToTableData.add(ToTableDto())
+        itemToTableData.add(ToTableDto())
+        itemToTableData.add(ToTableDto())
+        itemToTableData.add(ToTableDto())
+        itemToTableData.add(ToTableDto())
+        itemToTableData.add(ToTableDto())
+        itemToTableData.add(ToTableDto())
+        itemToTableData.add(ToTableDto())
+        itemToTableData.add(ToTableDto())
+        itemToTableData.add(ToTableDto())
+        itemToTableData.add(ToTableDto())
+        itemToTableData.add(ToTableDto())
+        itemToTableData.add(ToTableDto())
+        itemToTableData.add(ToTableDto())
+        itemToTableData.add(ToTableDto())
+        itemToTableAdapter.setItems(itemToTableData)
+        binding.recycle.adapter = itemToTableAdapter
         binding.recycle.layoutManager = LinearLayoutManager(this)
         binding.recycle.addItemDecoration(SpaceItemDecoration(7.dpToPx, 0.dpToPx, 0.dpToPx))
         binding.recycle.setHasFixedSize(true)
         binding.recycle.itemAnimator = null
-        itemCoworkerAdapter.setOnItemClickListener(listener = object :
-            BaseRecyclerAdapter.OnItemClickListener<CoworkerDto> {
-            override fun onItemClick(holder: Any, item: CoworkerDto, position: Int) {
-
+        itemToTableAdapter.setOnItemClickListener(listener = object :
+            BaseRecyclerAdapter.OnItemClickListener<ToTableDto> {
+            override fun onItemClick(holder: Any, item: ToTableDto, position: Int) {
+                navigate(ChooseToTableActivity::class.java)
             }
         })
         binding.srl.setRefreshHeader(ClassicsHeader(this))
@@ -80,7 +92,10 @@ class CoworkerActivity : BaseAppBindActivity<ActivityCoworkerBookBinding>() {
 
     override fun initBarHelperConfig(): BarHelperConfig {
         return BarHelperConfig.builder().setBack(true).setIconLeft(R.drawable.icon_black_left)
-            .setBgColor(nearby.lib.base.R.color.white).setTitle(title = getString(R.string.coworker_book), titleColor = nearby.lib.base.R.color.black).build()
+            .setBgColor(nearby.lib.base.R.color.white).setTitle(
+                title = getString(R.string.to_table),
+                titleColor = nearby.lib.base.R.color.black
+            ).build()
     }
 
 }

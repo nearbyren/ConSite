@@ -14,7 +14,9 @@ import apps.construction.site.model.MenuDto
 import apps.construction.site.model.SwitchDto
 import apps.construction.site.ui.CoworkerActivity
 import apps.construction.site.ui.DocumentUploadActivity
+import apps.construction.site.ui.FileDirectoryActivity
 import apps.construction.site.ui.SelectTabTypeActivity
+import apps.construction.site.ui.ToTableActivity
 import com.scwang.smart.refresh.footer.ClassicsFooter
 import com.scwang.smart.refresh.header.ClassicsHeader
 import com.scwang.smart.refresh.layout.listener.OnLoadMoreListener
@@ -44,7 +46,7 @@ class IndexFragment1 :
     private val itemSwitchProjectAdapter by lazy { ItemSwitchProjectAdapter() }
     override fun initialize(savedInstanceState: Bundle?) {
         itemMenuData.add(MenuDto("表格", R.drawable.ic_item_01))
-        itemMenuData.add(MenuDto("通往表格", R.drawable.ic_item_02))
+        itemMenuData.add(MenuDto("過往表格", R.drawable.ic_item_02))
         itemMenuData.add(MenuDto("證件上傳", R.drawable.ic_item_03))
         itemMenuData.add(MenuDto("文件", R.drawable.ic_item_04))
         itemMenuData.add(MenuDto("工友通訊錄", R.drawable.ic_item_05))
@@ -62,15 +64,24 @@ class IndexFragment1 :
             BaseRecyclerAdapter.OnItemClickListener<MenuDto> {
             override fun onItemClick(holder: Any, item: MenuDto, position: Int) {
                 when (item.text) {
-                    "通往表格" -> {
+                    "表格" -> {
                         navigate(SelectTabTypeActivity::class.java)
                     }
-
+                    "過往表格" -> {
+                        navigate(ToTableActivity::class.java)
+                    }
                     "證件上傳" -> {
                         navigate(DocumentUploadActivity::class.java)
+
+                    }
+                    "文件" -> {
+                        navigate(FileDirectoryActivity::class.java)
                     }
                     "工友通訊錄" -> {
                         navigate(CoworkerActivity::class.java)
+                    }
+                    "匯總表" -> {
+
                     }
                 }
             }

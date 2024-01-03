@@ -41,7 +41,7 @@
         <!--Android FileProvider 7.0及以上版本APP覆盖安装适配-->
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="${applicationId}.fileprovider"
+            android:authorities="${applicationId}.fileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -157,6 +157,26 @@
         <activity
             android:name="apps.construction.site.ui.CoworkerActivity"
             android:exported="true"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme" />
+
+        <!--過往表格-->
+        <activity
+            android:name="apps.construction.site.ui.ToTableActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme" />
+
+        <!--選擇過往表格-->
+        <activity
+            android:name="apps.construction.site.ui.ChooseToTableActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme" />
+
+        <!--文件目錄-->
+        <activity
+            android:name="apps.construction.site.ui.FileDirectoryActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan"
             android:theme="@style/AppTheme" />
     </application>
 
